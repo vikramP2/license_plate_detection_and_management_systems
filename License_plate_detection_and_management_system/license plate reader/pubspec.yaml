@@ -1,0 +1,27 @@
+name: license_plate_reader
+description: A Flutter app to display license plate data.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: ^0.18.0
+  sqflite: ^2.2.0
+  sqflite_common_ffi: ^2.2.0
+  path_provider: ^2.0.11
+  sembast: ^3.0.0 # Ensure you have the correct version
+  sembast_web: ^2.4.0+4 # Make sure you include this for web support
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/LicensePlateData.json
+    - assets/images/

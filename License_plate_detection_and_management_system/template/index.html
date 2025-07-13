@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>License Plates Database</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 1em;
+            text-align: left;
+        }
+        table th, table td {
+            border: 1px solid #dddddd;
+            padding: 12px;
+        }
+        table th {
+            background-color: #007BFF;
+            color: white;
+        }
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>License Plates Database</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>License Plate</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
